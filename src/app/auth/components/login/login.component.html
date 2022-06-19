@@ -1,0 +1,30 @@
+<div class="container d-flex justify-content-center">
+    <div class="form-wrapper p-5 m-5 shadow rounded">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="d-flex flex-column align-items-center">
+            <h2>Login</h2>
+            <p>Seja bem-vindo(a)!</p>
+            <mat-form-field class="login-align w-100" appearance="fill">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Seu email" formControlName="email" required>
+                <mat-error *ngIf="loginForm.get('email')?.errors?.['required']">Campo obrigatório</mat-error>
+                <mat-error *ngIf="loginForm.get('email')?.errors?.['email']">Email inválido</mat-error>
+                <mat-icon matPrefix>person</mat-icon>
+            </mat-form-field>
+            <mat-form-field class="login-align w-100" appearance="fill">
+                <mat-label>Senha</mat-label>
+                <input matInput placeholder="Sua senha" formControlName="senha" required>
+                <mat-error *ngIf="loginForm.get('senha')?.errors?.['required']">Campo obrigatório</mat-error>
+                <mat-error *ngIf="loginForm.get('senha')?.errors?.['minlength']">O mínimo são 8 caracteres
+                </mat-error>
+                <mat-icon matPrefix>key</mat-icon>
+            </mat-form-field>
+            <button mat-raised-button color="primary" class="mt-2" [disabled]="loginForm.invalid">Login</button>
+            <a routerLink="/recuperar-senha">Esqueci minha senha</a>
+            <span class="my-4">ou</span>
+            <button (click)="onLoginGoogle()" type="button" mat-raised-button color="warn">
+                Entrar com o Google
+            </button>
+
+        </form>
+    </div>
+</div>

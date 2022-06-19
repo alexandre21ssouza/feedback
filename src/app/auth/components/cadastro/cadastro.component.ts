@@ -6,9 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cadastro.component.scss']
 })
 export class CadastroComponent implements OnInit {
-
+  nome:string = '';
+  email:string = '';
+  senha:string = '';
+  
   constructor() { }
 
+
+  onSubmit(){
+   
+  }
   ngOnInit(): void {
   }
 
