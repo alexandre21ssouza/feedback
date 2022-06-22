@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthModule } from './auth/auth.module';
+import { CursosModule } from './cursos/cursos.module';
 
 
 
@@ -23,6 +24,7 @@ import { AuthModule } from './auth/auth.module';
     CoreModule,
     BrowserAnimationsModule,
     AuthModule,
+    CursosModule,
     
   ],
   providers: [],

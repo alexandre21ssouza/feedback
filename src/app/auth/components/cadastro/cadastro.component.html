@@ -3,21 +3,21 @@
         <form #cadastroForm="ngForm" class="m-1" (ngSubmit)="onSubmit()">
             <h2>Cadastro</h2>
             <p>Seja bem-vindo(a)!</p>
-            <mat-form-field class="login-align w-100" appearance="fill">
+            <mat-form-field class="cadastro-align w-100" appearance="fill">
                 <mat-label for="nome" class="form-label">Nome</mat-label>
                 <input matInput placeholder #nomeInp="ngModel" [(ngModel)]="nome" type="nome" name="nome" id="nome"
                     class="form-control" required>
                 <small *ngIf="nomeInp.touched && nomeInp.invalid" class="text-danger">Campo inválido</small>
                 <mat-icon matPrefix>person</mat-icon>
             </mat-form-field>
-            <mat-form-field class="login-align w-100" appearance="fill">
+            <mat-form-field class="cadastro-align w-100" appearance="fill">
                 <mat-label for="email" class="form-label">Email</mat-label>
                 <input matInput placeholder #emailInp="ngModel" [(ngModel)]="email" type="email" name="email" id="email"
                     class="form-control" required>
                 <small *ngIf="emailInp.touched && emailInp.invalid" class="text-danger">Campo inválido</small>
                 <mat-icon matPrefix>email</mat-icon>
             </mat-form-field>
-            <mat-form-field class="login-align w-100" appearance="fill">
+            <mat-form-field class="cadastro-align w-100" appearance="fill">
                 <mat-label for="senha" class="form-label">Senha</mat-label>
                 <input matInput placeholder #senhaInp="ngModel" [(ngModel)]="senha" type="password" name="senha"
                     id="senha" class="form-control" required>

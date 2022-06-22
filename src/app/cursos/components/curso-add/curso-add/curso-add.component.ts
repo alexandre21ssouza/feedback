@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-curso-add',
@@ -7,7 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CursoAddComponent implements OnInit {
 
-  constructor() { }
+  constructor( private fb: FormBuilder) { }
+
+  novoCurso = this.fb.group({
+    nome: ['', [Validators.required]],
+    
+
+
+  }) 
+
+  get nome(){
+    return this.novoCurso.get("nome");
+  }
+
+  onSubmit(){
+    alert("Curso criado com sucesso!")
+  }
 
   ngOnInit(): void {
   }
