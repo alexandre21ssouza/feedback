@@ -11,6 +11,7 @@ import { CursosModule } from './cursos/cursos.module';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +26,7 @@ import { CursosModule } from './cursos/cursos.module';
     BrowserAnimationsModule,
     AuthModule,
     CursosModule,
+   
     
   ],
   providers: [],

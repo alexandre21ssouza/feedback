@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CursoListComponent } from './components/curso-list/curso-list/curso-list.component';
 import { CursoAddComponent } from './components/curso-add/curso-add/curso-add.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MaterialModule } from '../shared/material.module';
 
 
 
@@ -15,6 +16,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     ReactiveFormsModule,
+    MaterialModule,
 
   ]
 })

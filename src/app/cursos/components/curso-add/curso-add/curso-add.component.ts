@@ -10,19 +10,24 @@ export class CursoAddComponent implements OnInit {
 
   constructor( private fb: FormBuilder) { }
 
-  novoCurso = this.fb.group({
-    nome: ['', [Validators.required]],
+  novoCursoForm = this.fb.group({
+    nomeDoCurso: ['', [Validators.required]],
+    areaDoCurso: ['', [Validators.required]],
+    descricaoDoCurso: ['', [Validators.required]],
+    cargaHoraria: ['', [Validators.required]],
+    valorDoCurso: ['', [Validators.required]],
     
 
 
   }) 
 
-  get nome(){
-    return this.novoCurso.get("nome");
-  }
 
   onSubmit(){
     alert("Curso criado com sucesso!")
+  }
+
+  onImagem(){
+    alert("Imagem adicionada com sucesso!")
   }
 
   ngOnInit(): void {

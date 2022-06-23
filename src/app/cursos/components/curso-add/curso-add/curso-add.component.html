@@ -1,17 +1,65 @@
 <div class="container d-flex justify-content-center">
     <div class="form-wrapper p-5 m-5 shadow rounded">
-<form [formGroup]="novoCurso" (ngSubmit)="onSubmit()" class="d-flex flex-column align-items-center">
-    <p>Seja bem-vindo(a)!</p>
-    <h2>Adição de novos Curso</h2>
-    
-    <div class="mb-3">
-        <label for="nome" class="form-label">Nome do curso</label>
-        <input type="text" formControlName="nome" id="nome" class="form-control">
-        <small class="text-danger" *ngIf="nome?.touched && nome?.invalid">
-            <span *ngIf="nome?.hasError('required')" >Curso obrigatório</span>
-        </small>
-    </div>
-    
-  
+        <form [formGroup]="novoCursoForm" (ngSubmit)="onSubmit()" class="d-flex flex-column align-items-center">
+            <h2>Adição de novos Curso</h2>
+            <p>Seja bem-vindo(a)!</p>
+            <mat-form-field class="addCursos-align w-100" appearance="fill">
+                <mat-label>Nome do curso</mat-label>
+                <input matInput placeholder="Nome do curso" formControlName="nomeDoCurso" required>
+                <mat-error *ngIf="novoCursoForm.get('nomeDoCurso')?.errors?.['required']">Campo obrigatório
+                </mat-error>
+                <mat-icon matPrefix>person</mat-icon>
+            </mat-form-field>
 
-</form>
+            <mat-form-field class="addCursos-align w-100" appearance="fill">
+                <mat-label>Área do curso</mat-label>
+                <input matInput placeholder="Área do curso" formControlName="areaDoCurso" required>
+                <mat-error *ngIf="novoCursoForm.get('areaDoCurso')?.errors?.['required']">Campo obrigatório
+                </mat-error>
+                <mat-icon matPrefix>person</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field class="cursos-align w-100" appearance="fill" >
+                <mat-label>Descrição do curso</mat-label>
+                <textarea matInput></textarea>
+                <input matInput placeholder="Descrição do curso" formControlName="descricaoDoCurso" required>
+                <mat-error *ngIf="novoCursoForm.get('descricaoDoCurso')?.errors?.['required']">Campo obrigatório
+                </mat-error>
+                <mat-icon matPrefix>person</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field class="addCursos-align w-100" appearance="fill">
+                <mat-label>Carga horária</mat-label>
+                <input matInput placeholder="Carga horária" formControlName="cargaHoraria" required>
+                <mat-error *ngIf="novoCursoForm.get('cargaHoraria')?.errors?.['required']">Campo obrigatório
+                </mat-error>
+                <mat-icon matPrefix>person</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field class="addCursos-align w-100" appearance="fill">
+                <mat-label>Valor do curso</mat-label>
+                <input matInput placeholder="Valor do curso" formControlName="valorDoCurso" required>
+                <mat-error *ngIf="novoCursoForm.get('valorDoCurso')?.errors?.['required']">Campo obrigatório
+                </mat-error>
+                <mat-icon matPrefix>person</mat-icon>
+            </mat-form-field>
+
+
+            <button
+            (click)="onImagem()"
+            type="button"
+            mat-raised-button color="warn"
+            
+            >
+              <mat-icon>upload</mat-icon>
+              Imagem do slogan do curso</button
+            ><br />
+            <button mat-raised-button color="primary" [disabled]="novoCursoForm">
+              Adicionar 
+            </button>
+
+        
+
+        </form>
+    </div>
+</div>
