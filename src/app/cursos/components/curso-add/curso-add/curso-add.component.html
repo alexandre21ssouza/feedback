@@ -1,6 +1,7 @@
 <div class="container d-flex justify-content-center">
     <div class="form-wrapper p-5 m-5 shadow rounded">
         <form [formGroup]="novoCursoForm" (ngSubmit)="onSubmit()" class="d-flex flex-column align-items-center">
+            <a href=""><img src="assets/logo.png" alt="Logo da aplicação" style="width: 260px;"></a>
             <h2>Adição de novos Curso</h2>
             <p>Seja bem-vindo(a)!</p>
             <mat-form-field class="addCursos-align w-100" appearance="fill">
@@ -8,15 +9,24 @@
                 <input matInput placeholder="Nome do curso" formControlName="nomeDoCurso" required>
                 <mat-error *ngIf="novoCursoForm.get('nomeDoCurso')?.errors?.['required']">Campo obrigatório
                 </mat-error>
-                <mat-icon matPrefix>person</mat-icon>
+                <mat-icon matPrefix>import_contacts</mat-icon>
             </mat-form-field>
 
+            
             <mat-form-field class="addCursos-align w-100" appearance="fill">
                 <mat-label>Área do curso</mat-label>
                 <input matInput placeholder="Área do curso" formControlName="areaDoCurso" required>
                 <mat-error *ngIf="novoCursoForm.get('areaDoCurso')?.errors?.['required']">Campo obrigatório
                 </mat-error>
-                <mat-icon matPrefix>person</mat-icon>
+                <mat-icon matPrefix>auto_stories</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field class="addCursos-align w-100" appearance="fill">
+                <mat-label>Área do curso</mat-label>
+                <input matInput placeholder="Nível" formControlName="nivel" required>
+                <mat-error *ngIf="novoCursoForm.get('nivel')?.errors?.['required']">Campo obrigatório
+                </mat-error>
+                <mat-icon matPrefix>edit</mat-icon>
             </mat-form-field>
 
             <mat-form-field class="cursos-align w-100" appearance="fill" >
@@ -25,7 +35,7 @@
                 <input matInput placeholder="Descrição do curso" formControlName="descricaoDoCurso" required>
                 <mat-error *ngIf="novoCursoForm.get('descricaoDoCurso')?.errors?.['required']">Campo obrigatório
                 </mat-error>
-                <mat-icon matPrefix>person</mat-icon>
+                <mat-icon matPrefix>assignment</mat-icon>
             </mat-form-field>
 
             <mat-form-field class="addCursos-align w-100" appearance="fill">
@@ -33,7 +43,7 @@
                 <input matInput placeholder="Carga horária" formControlName="cargaHoraria" required>
                 <mat-error *ngIf="novoCursoForm.get('cargaHoraria')?.errors?.['required']">Campo obrigatório
                 </mat-error>
-                <mat-icon matPrefix>person</mat-icon>
+                <mat-icon matPrefix>schedule</mat-icon>
             </mat-form-field>
 
             <mat-form-field class="addCursos-align w-100" appearance="fill">
@@ -41,7 +51,7 @@
                 <input matInput placeholder="Valor do curso" formControlName="valorDoCurso" required>
                 <mat-error *ngIf="novoCursoForm.get('valorDoCurso')?.errors?.['required']">Campo obrigatório
                 </mat-error>
-                <mat-icon matPrefix>person</mat-icon>
+                <mat-icon matPrefix>attach_money</mat-icon>
             </mat-form-field>
 
 

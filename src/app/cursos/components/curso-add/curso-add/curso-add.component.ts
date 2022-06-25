@@ -13,6 +13,7 @@ export class CursoAddComponent implements OnInit {
   novoCursoForm = this.fb.group({
     nomeDoCurso: ['', [Validators.required]],
     areaDoCurso: ['', [Validators.required]],
+    nivel: ['', [Validators.required]],
     descricaoDoCurso: ['', [Validators.required]],
     cargaHoraria: ['', [Validators.required]],
     valorDoCurso: ['', [Validators.required]],

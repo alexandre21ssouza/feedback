@@ -1,9 +1,12 @@
 export interface Curso {
    
     nomeDoCurso: string;
-    area: string;
-    descrição: string;
+    areaDoCurso: string;
+    nivel: string;
+    descricao: string;
     cargaHoraria: string;
     valor: number;
+    desconto: number;
+    emPromocao: string;
     imagem: string;
 }
