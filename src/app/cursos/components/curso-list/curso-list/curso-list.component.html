@@ -1,28 +1,22 @@
 <div class="lista">
-    <div *ngFor="let listaDeCursos of array" class="lec">
-        <img [src]="listaDeCursos.imagem" class="card-img-top lista de cursos-img efeito" alt="Imagens dos cursos">
+    <div *ngFor="let listaDeCursos of array" class="filho" >
+        <img [src]="listaDeCursos.imagem" class="img" alt="Imagens dos cursos">
         <div class="card-body">
             <h4 class="card-title">{{listaDeCursos.nomeDoCurso}}</h4>
             <h4>
-                <p class="card-text">{{listaDeCursos.descricao}} 
+                <p class="card-text">{{listaDeCursos.descricao}}
                 </p>
             </h4>
-            <h3 class="text-success" [ngClass]="{'text-muted riscado': listaDeCursos.emPromocao}">{{listaDeCursos.valor |
+            <h3 class="text-success" [ngClass]="{'text-muted riscado': listaDeCursos.emPromocao}">{{listaDeCursos.valor
+                |
                 currency:"BRL"}}
-
             </h3>
-           
             <div *ngIf="listaDeCursos.emPromocao">
                 <h3 class="text-success">{{valorDesconto(listaDeCursos) | currency:"BRL"}}</h3>
                 <h3><span class="badge bg-success">{{listaDeCursos.desconto | percent}} OFF</span></h3>
             </div>
-
-            <!-- <div [ngSwitch]="listaDeCursos.categoria">
-                <span class="badge bg-info" *ngSwitchCase="'jogos'">Jogos</span>
-                <span class="badge bg-primary" *ngSwitchCase="'acessorios'">Acessórios</span>
-                <span class="badge bg-danger" *ngSwitchCase="'colecionaveis'">Colecionáveis</span>
-                <span class="badge bg-secondary" *ngSwitchCase="'consoles'">Consoles</span>
-                <span class="badge bg-dark" *ngSwitchDefault>Outros</span>
-            </div> -->
             <br>
             <button (click)="onComprar(listaDeCursos)" class="btn btn-primary">Comprar</button>
+        </div>
+    </div>
+</div>

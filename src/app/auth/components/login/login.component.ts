@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit {
     
 
   onSubmit(){
+    alert("Login efetuado com sucesso!")
   }
 
   ngOnInit(): void {

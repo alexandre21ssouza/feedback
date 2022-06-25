@@ -7,6 +7,6 @@ export interface Curso {
     cargaHoraria: string;
     valor: number;
     desconto: number;
-    emPromocao: string;
+    emPromocao: boolean;
     imagem: string;
 }

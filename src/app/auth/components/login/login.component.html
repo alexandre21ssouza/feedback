@@ -1,6 +1,6 @@
-<div class="container d-flex justify-content-center">
+<div class="container">
     <div class="form-wrapper p-5 m-5 shadow rounded">
-        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="d-flex flex-column align-items-center">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
             <a href=""><img src="assets/logo.png" alt="Logo da aplicação" style="width: 260px;"></a>
             <h2>Login</h2>
             <p>Seja bem-vindo(a)!</p>
@@ -19,7 +19,7 @@
                 </mat-error>
                 <mat-icon matPrefix>key</mat-icon>
             </mat-form-field>
-            <button mat-raised-button color="primary" class="mt-2" [disabled]="loginForm.invalid">Login</button>
+            <button (click)="onSubmit()" mat-raised-button color="primary" class="mt-2" [disabled]="loginForm.invalid">Login</button>
             <a routerLink="/recuperar-senha">Esqueci minha senha</a>
             <span class="my-4">ou</span>
             <button (click)="onLoginGoogle()" type="button" mat-raised-button color="warn">

@@ -1,13 +1,19 @@
 .lista {
-    margin-top: 80px;
+    width: 18rem;
+    height: 600px;
+    text-align: center;
+    margin-top: 100px;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin-left: 120px;
+   
+}
+.img{
+    max-width: 270px;
+    object-fit: cover;
 }
 
-.lec {
-    margin-left: 120px;
-    width: 460px;
-    height: 650px;
+.filho{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
 }

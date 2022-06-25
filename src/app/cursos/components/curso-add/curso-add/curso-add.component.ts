@@ -8,7 +8,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class CursoAddComponent implements OnInit {
 
-  constructor( private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder) { }
 
   novoCursoForm = this.fb.group({
     nomeDoCurso: ['', [Validators.required]],
@@ -17,17 +17,14 @@ export class CursoAddComponent implements OnInit {
     descricaoDoCurso: ['', [Validators.required]],
     cargaHoraria: ['', [Validators.required]],
     valorDoCurso: ['', [Validators.required]],
-    
+  })
 
 
-  }) 
-
-
-  onSubmit(){
+  onSubmit() {
     alert("Curso criado com sucesso!")
   }
 
-  onImagem(){
+  onImagem() {
     alert("Imagem adicionada com sucesso!")
   }
 
