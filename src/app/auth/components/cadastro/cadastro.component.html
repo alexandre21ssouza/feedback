@@ -4,6 +4,7 @@
             <a href=""><img src="assets/logo.png" alt="Logo da aplicação" style="width: 260px;"></a>
             <h2>Cadastro</h2>
             <p>Seja bem-vindo(a)!</p>
+            <p>Você já tem uma conta?<a routerLink="/login"><button class="btn btn-link ">Login</button></a></p>
             <mat-form-field class="cadastro-align w-100" appearance="fill">
                 <mat-label for="nome" class="form-label">Nome</mat-label>
                 <input matInput placeholder #nomeInp="ngModel" [(ngModel)]="nome" type="nome" name="nome" id="nome"
