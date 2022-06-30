@@ -10,6 +10,7 @@ export class CadastroComponent implements OnInit {
   email:string = '';
   senha:string = '';
   
+  ocultar = true;
   constructor() { }
 
 

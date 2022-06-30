@@ -13,11 +13,15 @@
             </mat-form-field>
             <mat-form-field class="login-align w-100" appearance="fill">
                 <mat-label>Senha</mat-label>
-                <input matInput placeholder="Sua senha" formControlName="senha" required>
+                <input matInput [type]="ocultar ? 'password' : 'text'" placeholder="Sua senha" formControlName="senha"
+                    type="text" required>
                 <mat-error *ngIf="loginForm.get('senha')?.errors?.['required']">Campo obrigatório</mat-error>
-                <mat-error *ngIf="loginForm.get('senha')?.errors?.['minlength']">O mínimo são 8 caracteres
-                </mat-error>
+                <mat-error *ngIf="loginForm.get('senha')?.errors?.['minlength']">O mínimo são 8 caracteres</mat-error>
                 <mat-icon matPrefix>key</mat-icon>
+                <button mat-icon-button matSuffix (click)="ocultar = !ocultar" [attr.aria-label]="'password'"
+                    [attr.aria-pressed]="ocultar">
+                    <mat-icon>{{ocultar ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
             </mat-form-field>
             <button (click)="onSubmit()" mat-raised-button color="primary" class="mt-2" [disabled]="loginForm.invalid">Login</button>
             <a routerLink="/recuperar-senha">Esqueci minha senha</a>

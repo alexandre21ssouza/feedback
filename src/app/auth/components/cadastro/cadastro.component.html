@@ -24,6 +24,10 @@
                     id="senha" class="form-control" required>
                 <small *ngIf="senhaInp.touched && senhaInp.invalid" class="text-danger">Campo inválido</small>
                 <mat-icon matPrefix>key</mat-icon>
+                <button mat-icon-button matSuffix (click)="ocultar = !ocultar" [attr.aria-label]="'password'"
+                [attr.aria-pressed]="ocultar">
+                <mat-icon>{{ocultar ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
             </mat-form-field>
             <button type="button" class="btn btn-primary" [disabled]="cadastroForm.invalid"> Cadastrar </button>
 
