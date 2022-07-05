@@ -1,7 +1,7 @@
 <div class="container">
     <div class="form-wrapper p-5 m-5 shadow rounded">
         <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-            <a href=""><img src="assets/logo.png" alt="Logo da aplicação" style="width: 260px;"></a>
+            <a [routerLink]="['']"><img class="top" src="assets/logo.png" alt="Logo da aplicação" style="width: 260px;"></a>
             <h2>Login</h2>
             <p>Seja bem-vindo(a)!</p>
             <p>Novo no site? <a routerLink="/cadastro"><button class="btn btn-link">Cadastre-se</button></a></p>
@@ -24,9 +24,9 @@
                     <mat-icon>{{ocultar ? 'visibility_off' : 'visibility'}}</mat-icon>
                 </button>
             </mat-form-field>
-            <button (click)="onSubmit()" mat-raised-button color="primary" class="mt-2" [disabled]="loginForm.invalid">Login</button>
-            <a routerLink="/recuperar-senha">Esqueci minha senha</a>
-            <span class="my-4">ou</span>
+            <button (click)="onSubmit()" mat-raised-button color="primary" class="mt-2" [disabled]="loginForm.invalid" routerLink="/cursolist">Login</button>
+            <a class="my-3" routerLink="">Esqueci minha senha</a>
+            <h3 class="my-2">ou</h3>
             <button (click)="onLoginGoogle()" type="button" mat-raised-button color="warn">
                 Entrar com o Google
             </button>

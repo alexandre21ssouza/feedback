@@ -53,6 +53,26 @@
                 <mat-icon matPrefix>attach_money</mat-icon>
             </mat-form-field>
 
+            <mat-form-field class="login-align w-100" appearance="fill">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Seu email" formControlName="email" required>
+                <mat-error *ngIf="novoCursoForm.get('email')?.errors?.['required']">Campo obrigatório</mat-error>
+                <mat-error *ngIf="novoCursoForm.get('email')?.errors?.['email']">Email inválido</mat-error>
+                <mat-icon matPrefix>person</mat-icon>
+            </mat-form-field>
+            <mat-form-field class="login-align w-100" appearance="fill">
+                <mat-label>Senha</mat-label>
+                <input matInput [type]="ocultar ? 'password' : 'text'" placeholder="Sua senha" formControlName="senha"
+                    type="text" required>
+                <mat-error *ngIf="novoCursoForm.get('senha')?.errors?.['required']">Campo obrigatório</mat-error>
+                <mat-error *ngIf="novoCursoForm.get('senha')?.errors?.['minlength']">O mínimo são 8 caracteres</mat-error>
+                <mat-icon matPrefix>key</mat-icon>
+                <button mat-icon-button matSuffix (click)="ocultar = !ocultar" [attr.aria-label]="'password'"
+                    [attr.aria-pressed]="ocultar">
+                    <mat-icon>{{ocultar ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+
         <button (click)="onImagem()" type="button" mat-raised-button color="warn">
             <mat-icon>upload</mat-icon>
             Imagem do slogan do curso

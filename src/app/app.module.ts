@@ -8,6 +8,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthModule } from './auth/auth.module';
 import { CursosModule } from './cursos/cursos.module';
 import { MaterialModule } from './shared/material.module';
+import { HomeComponent } from './shared/home/home.component';
+import { SharedModule } from './shared/shared.module';
+
+
 
 
 
@@ -16,6 +20,7 @@ import { MaterialModule } from './shared/material.module';
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
    
   
   
@@ -28,6 +33,8 @@ import { MaterialModule } from './shared/material.module';
     AuthModule,
     CursosModule,
     MaterialModule,
+    SharedModule
+    
    
    
     

@@ -1,11 +1,24 @@
-<mat-toolbar color="primary">
-    <span>+Mais cursos</span>
-    <span class="spacer"></span>
-    <div class="link-area">
-        <a mat-button>+Mais curso</a>
-    </div>
-    <div>
-        <a mat-button routerLink="/login">Login</a>
-        <a mat-button routerLink="/cadastro" >Cadastro</a>
-    </div>
-</mat-toolbar>
+<p>
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="too" aria-label="Example icon-button with menu icon">
+      <button mat-button [matMenuTriggerFor]="menu">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="login">Login</button>
+        <button mat-menu-item routerLink="cadastro">Cadastre-se como aluno</button>
+        <button mat-menu-item routerLink="login">Item 1</button>
+        <button mat-menu-item routerLink="login">Item 1</button>
+      </mat-menu>
+    </button>
+    <span >+Mais cursos</span>
+    <button mat-button class="alin" [routerLink]="['']"><mat-icon>home</mat-icon>Home</button>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon></mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon></mat-icon>
+    </button>
+  </mat-toolbar>
+</p>

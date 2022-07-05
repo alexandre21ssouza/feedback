@@ -1,7 +1,7 @@
 <div class="container">
     <div class="form-wrapper p-5 m-5 shadow rounded">
         <form #cadastroForm="ngForm" class="m-1" (ngSubmit)="onSubmit()">
-            <a href=""><img src="assets/logo.png" alt="Logo da aplicação" style="width: 260px;"></a>
+            <a href=""><img class="top" src="assets/logo.png" alt="Logo da aplicação" style="width: 260px;"></a>
             <h2>Cadastro</h2>
             <p>Seja bem-vindo(a)!</p>
             <p>Você já tem uma conta?<a routerLink="/login"><button class="btn btn-link ">Login</button></a></p>
@@ -30,7 +30,7 @@
                 <mat-icon>{{ocultar ? 'visibility_off' : 'visibility'}}</mat-icon>
             </button>
             </mat-form-field>
-            <button type="button" class="btn btn-primary" [disabled]="cadastroForm.invalid"> Cadastrar </button>
+            <button type="button" class="btn btn-primary" [disabled]="cadastroForm.invalid" routerLink="/cursolist"> Cadastrar </button>
 
         </form>
     </div>

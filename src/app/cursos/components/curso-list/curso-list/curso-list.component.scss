@@ -1,19 +1,74 @@
-.lista {
-    width: 18rem;
-    height: 600px;
-    text-align: center;
-    margin-top: 100px;
-    display: flex;
-   
+.container{
+    background-image: inherit;
+    background-size: cover;
+    width: 220%;
+    height: 20%;
 }
+
+.body{
+    background-color: #d3d3d3
+}
+
+.lista {
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+    
+}
+
+
 .img{
-    max-width: 270px;
-    object-fit: cover;
+    margin-top: 40px;
+    width: 150px;
+    margin-left: 160px;
+    background-color: white;
+    margin-top: 4%;
+   
+    
+
 }
 
 .filho{
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    margin-left: 70px;
+    width: 460px;
+    height: 650px;
+    border: solid 1px;
+    border-radius: 25px;
+    margin-top: 20px;
+    background-color: white;
+    border-left: solid 15px blue;
+    
+    
 
+}
+.card-text{
+    text-align:start;
+    
+}
+
+.card-title{
+    text-align: center;
+    font-weight: bold;
+}
+
+.text-success{
+    text-align: center;
+    font-weight: bold;
+}
+
+.tom{
+text-align: center
+}
+
+.btn {
+    margin-left: 180px;
+    margin-bottom: 60px;
+    
+
+}
+
+.riscado {
+    text-decoration: line-through;
 }

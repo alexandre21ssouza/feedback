@@ -9,6 +9,8 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class CursoAddComponent implements OnInit {
 
   constructor(private fb: FormBuilder) { }
+  ocultar = true;
+
 
   novoCursoForm = this.fb.group({
     nomeDoCurso: ['', [Validators.required]],
@@ -17,6 +19,8 @@ export class CursoAddComponent implements OnInit {
     descricaoDoCurso: ['', [Validators.required]],
     cargaHoraria: ['', [Validators.required]],
     valorDoCurso: ['', [Validators.required]],
+    email:['', [Validators.required, Validators.email]],
+  senha:['', [Validators.required, Validators.minLength(8)]]
   })
 
 
