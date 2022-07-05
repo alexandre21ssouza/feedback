@@ -5,8 +5,18 @@
         <mat-icon>menu</mat-icon>
       </button>
       <mat-menu #menu="matMenu">
-        <button mat-menu-item routerLink="login">Login</button>
-        <button mat-menu-item routerLink="cadastro">Cadastre-se como aluno</button>
+        <button mat-menu-item routerLink="login">
+          <mat-icon>login</mat-icon>Login
+        </button>
+        <button mat-menu-item routerLink="cadastro">
+          <mat-icon>person</mat-icon>Cadastre-se como aluno
+        </button>
+        <button mat-menu-item routerLink="cadastro-cliente">
+          <mat-icon>domain</mat-icon>Cadastre-se como empresa
+        </button>
+        <button mat-menu-item [routerLink]="['']">
+          <mat-icon>logout</mat-icon>Logout
+        </button>
       </mat-menu>
     </button>
     <span>+Mais cursos</span>

@@ -7,12 +7,14 @@ import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../shared/material.module';
+import { CadastroClienteComponent } from './components/cadastro/cadastro-cliente/cadastro-cliente.component';
 
 
 @NgModule({
   declarations: [
     LoginComponent,
-    CadastroComponent
+    CadastroComponent,
+    CadastroClienteComponent
   
   ],
   imports: [

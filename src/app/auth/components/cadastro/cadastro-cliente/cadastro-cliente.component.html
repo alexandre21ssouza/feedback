@@ -2,7 +2,7 @@
     <div class="form-wrapper p-5 m-5 shadow rounded">
         <form #cadastroForm="ngForm" class="m-1" (ngSubmit)="onSubmit()">
             <a href=""><img class="top" src="assets/logo.png" alt="Logo da aplicação" style="width: 260px;"></a>
-            <h2>Cadastro aluno</h2>
+            <h2>Cadastro adição de cursos</h2>
             <p>Seja bem-vindo(a)!</p>
             <p>Você já tem uma conta?<a routerLink="/login"><button class="btn btn-link ">Login</button></a></p>
             <mat-form-field class="cadastro-align w-100" appearance="fill">
@@ -20,7 +20,7 @@
                 <mat-icon matPrefix>email</mat-icon>
             </mat-form-field>
             <mat-form-field class="cadastro-align w-100" appearance="fill">
-                <mat-label for="senha" class="form-label">Senha</mat-label>
+                <mat-label for="senha" class="form-label">Senha de adição do curso</mat-label>
                 <input matInput placeholder #senhaInp="ngModel" [(ngModel)]="senha" type="password" name="senha"
                     id="senha" class="form-control" required>
                 <small *ngIf="senhaInp.touched && senhaInp.invalid" class="text-danger">Campo inválido</small>
@@ -31,7 +31,7 @@
                 </button>
             </mat-form-field>
             <button (click)="onSubmit()" type="button" class="btn btn-primary" [disabled]="cadastroForm.invalid"
-                routerLink="/cursolist"> Cadastrar </button>
+                routerLink="/cursoadd"> Cadastrar </button>
 
         </form>
     </div>
