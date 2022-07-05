@@ -1,3 +1,23 @@
+.ouro{
+  font-size: 38px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 70px;
+  color: blue;
+}
+
+.carousel{
+  display: flex;
+  align-items: center;
+  justify-content:center ;
+  flex-wrap: wrap;
+  width: 30%;
+  height: 40%;
+  margin-left: 33%;
+
+}
+
+
 .loglog{
   display: flex;
   justify-content: center;
@@ -10,6 +30,7 @@
   height: 300px;
   border: solid blue 5px;
   border-radius: 25px;
+  margin-top: 100px;
   margin-bottom: 100px;
 }
 
@@ -20,19 +41,18 @@
 
 
 .to{
-text-align: justify;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-font-size: 17px;
-
-
-}
-.estudante{
   display: flex;
-  justify-content: end;
-  
+  border: solid 5px blue;
+  border-radius: 10px;
+  width: 70%;
+  margin-left: 13%;
+  text-align: justify;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 17px;
 }
 
 .d-b{
+  margin-left: 35%;
   margin-top: 30px;
   margin-bottom: 30px;
   width: 500px;
@@ -42,16 +62,3 @@ font-size: 17px;
 }
 
 
-.empresa{
-  display: flex;
-  justify-content:start ;
-}
-.t-b{
-  margin-top: 30px;
-  margin-bottom: 30px;
-  width: 500px;
-  height: 350px;
-  border: solid 1px;
-  border-radius: 25px;
-
-}

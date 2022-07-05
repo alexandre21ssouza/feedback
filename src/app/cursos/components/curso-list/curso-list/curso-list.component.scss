@@ -1,8 +1,19 @@
-.container{
-    background-image: inherit;
-    background-size: cover;
-    width: 220%;
-    height: 20%;
+.ouro{
+    font-size: 38px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 70px;
+}
+
+.carousel{
+  display: flex;
+  align-items: center;
+  justify-content:center ;
+  flex-wrap: wrap;
+  width: 30%;
+  height: 40%;
+  margin-left: 33%;
+
 }
 
 .body{

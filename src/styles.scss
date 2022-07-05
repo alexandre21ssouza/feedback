@@ -9,6 +9,8 @@ body {
     padding: 16px;
     margin-top: 0%;
     background-color: white;
+    border: solid 1px blue;
+    border-radius: 45px;
   }
   
   form {
@@ -19,8 +21,8 @@ body {
   }
 
   .container{
-    width: 50%;
-    height: 200px;
-    padding-top: -100px;
+    width: 10%;
+    height: 100px;
+    padding-top: -50px;
   }
   
